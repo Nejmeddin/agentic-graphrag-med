@@ -1,0 +1,15 @@
+# Core tools
+neo4j-driver               # official Neo4j Python driver
+sentence-transformers      # embeddings
+chromadb                   # local vector DB
+langgraph 
+langchain        # agentic graph orchestration
+
+# Utilities
+python-dotenv              # load .env for secrets (Neo4j, API keys)
+pydantic                   # clean config / data models
+pydantic-settings
+langchain-community
+langchain-text-splitters
+langchain_core
+pypdf
