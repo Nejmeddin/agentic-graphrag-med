@@ -9,7 +9,11 @@ class Settings(BaseSettings):
     # Paths
     pdf_path: str = "data/source/essentials-of-human-diseases-and-conditions_compress.pdf"
     processed_dir: str = "data/processed"
-
+    
+    
+    # LLM / Groq config
+    groq_api_key: str | None = None
+    groq_model_name: str | None = None
     class Config:
         env_file = "C:\\Users\\User\\Desktop\\agentic-graphrag-med\\data\\source\\.env"
 

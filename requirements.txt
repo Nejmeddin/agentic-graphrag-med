@@ -13,3 +13,4 @@ langchain-community
 langchain-text-splitters
 langchain_core
 pypdf
+langchain_groq
