@@ -32,8 +32,10 @@ def main():
 
     # ⚠️ Pour commencer, limitons le nombre de chunks pour éviter les coûts
     # Tu pourras augmenter ce nombre plus tard.
-    MAX_CHUNKS = 50  # par ex. tester sur 50 chunks
-    records = records[:MAX_CHUNKS]
+    MAX_CHUNKS = 1000  # or comment this block
+
+    records = records if MAX_CHUNKS is None else records[:MAX_CHUNKS]
+
 
     print(f"🧠 Running LLM extraction on {len(records)} chunks...")
     output_path.parent.mkdir(parents=True, exist_ok=True)

@@ -11,7 +11,7 @@ def main():
         query = input("\n❓ Query: ").strip()
         if not query:
             break
-
+        print(f"\nRetrieving context for query: {query}")
         ctx = retrieve_with_vector_and_graph(
             query=query,
             n_results=3,
