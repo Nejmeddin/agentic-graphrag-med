@@ -21,6 +21,9 @@ def ensure_constraints(driver: Driver | None = None):
 
         "CREATE CONSTRAINT chunk_id_unique IF NOT EXISTS "
         "FOR (c:Chunk) REQUIRE c.chunk_id IS UNIQUE",
+            # 🔹 NEW: MedicalEntity unique by (type, name)
+        "CREATE CONSTRAINT med_entity_unique IF NOT EXISTS "
+        "FOR (e:MedicalEntity) REQUIRE (e.type, e.name) IS UNIQUE",
     ]
 
     with driver.session() as session:
